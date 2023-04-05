@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="520aa021-df14-41c9-acd2-988d7379d1a8" name="Changes" comment="assesing whether the given number is prime or not by using recursive method">
+    <list default="true" id="520aa021-df14-41c9-acd2-988d7379d1a8" name="Changes" comment="calculating the factorial of the number by using recursive method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -46,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680682907320</updated>
       <workItem from="1680682908898" duration="1069000" />
-      <workItem from="1680684701398" duration="7226000" />
+      <workItem from="1680684701398" duration="8984000" />
     </task>
     <task id="LOCAL-00001" summary="finding minimum of an array with &quot;n&quot; numbers">
       <created>1680683051277</created>
@@ -69,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680726996812</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="calculating the factorial of the number by using recursive method">
+      <created>1680730393363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730393363</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +86,7 @@
     <MESSAGE value="finding minimum of an array with &quot;n&quot; numbers" />
     <MESSAGE value="Finding the average of n elements in array using recursion" />
     <MESSAGE value="assesing whether the given number is prime or not by using recursive method" />
-    <option name="LAST_COMMIT_MESSAGE" value="assesing whether the given number is prime or not by using recursive method" />
+    <MESSAGE value="calculating the factorial of the number by using recursive method" />
+    <option name="LAST_COMMIT_MESSAGE" value="calculating the factorial of the number by using recursive method" />
   </component>
 </project>
