@@ -1,25 +1,35 @@
-public class Main {
-    public static void main(String[] args) {
-        int[] arr ={3, 2, 4, 1}; //creating an array with given numbers
-
-        double average = findavrg(arr, arr.length); //calling the findavrg function
-        System.out.println(average); //print the average
+import java.util.Scanner; //importing scanner from package
+public class Main{
+    public static boolean func(int a) {
+        return Prime(a,2); //calling function Prime and giving the arguments
     }
 
     /**
-     * Finding the average of n elements in the array using recursive method
-     * @param arr an array
-     * @param n the number of elements
-     * @return the average value of n elements in array
+     * Assesing if a given number is prime or not
+     * @param a The value to check whether it is prime or not
+     * @param b The divisor to check if value a is divisible by value b
+     * @return True if value a is prime, false otherwise
      */
-    public static double findavrg(int[] arr, int n)
+    private static boolean Prime(int a, int b) //recursive function
     {
-        if( n == 0 )
-            return 0; //if the value is equal to zero return zero
-        else{
-            double sum = findavrg(arr,n-1)*(n-1); //performing the function findavrg to get the sum of the first n-1 elements
-            sum += arr[n-1]; //adding the n-th element to the sum
-            return sum/n; //return the average value of n elements
+        if (a <= 1 || a % b == 0) {  // checking if the number is less than or equal to 1 or if it is divisible by b
+            return false;
+        }
+        if (b * b > a) { //checking if the square of b is greater than a
+            return true;
+        }
+        return Prime(a,b + 1); // if both conditions aren't satisfied, call the function recursively
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); //creating an object of the Scanner class
+        int n = sc.nextInt(); //taking inout value from user
+        boolean Prime = func(n); //assessing if the number is prime
+
+        if (Prime) {
+            System.out.println("Prime"); //if true, then prime
+        } else {
+            System.out.println("Composite"); //if false, then composite
         }
     }
 }
