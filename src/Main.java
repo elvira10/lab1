@@ -1,14 +1,14 @@
 import java.util.Scanner; //importing scanner from package
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
+        Scanner sc = new Scanner(System.in); //creating Scanner instance
+        int a = sc.nextInt(); //getting task number from the user
         switch (a){
             case 1:
-                Task1.task1_main();
+                Task1.task1_main(); //performing first task for case 1
                 break;
             default:
-                System.out.println("please enter number from 1 to 10");
+                System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
         }
     }
