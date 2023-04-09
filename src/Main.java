@@ -19,6 +19,9 @@ public class Main {
             case 5:
                 Task5.task5_main();
                 break;
+            case 6:
+                Task6.task6_main();
+                break;
             default:
                 System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
@@ -187,5 +190,36 @@ class Task5 {
         else {
             return findFibonacci(n-1) + findFibonacci(n-2); //recursively calculating using the formula
         }
+    }
+}
+
+
+class Task6 {
+    public static void task6_main(){
+        Scanner scanner = new Scanner(System.in); //creating a Scanner instance
+        System.out.println("Enter the number");  //getting the number from user
+        int a = scanner.nextInt(); //storing the input in variable a
+
+        System.out.println("Enter the power of number to be calculated");  //getting the power of number from user
+        int n = scanner.nextInt(); //storing the input in variable n
+
+        int power = Power(a, n); //calling the Power function
+        System.out.println(power); //printing the result
+    }
+
+    /**
+     * Calculating the value of a raised to the power of n using recursion
+     * @param a The integer number base
+     * @param n The exponent
+     * @return Result of "a" to the power of "n"
+     */
+    public static int Power(int a, int n){
+        if (n == 0) {
+            return 1; //base case, if n is zero return 1
+        }
+        if (n > 0) {
+            return a * Power(a, n-1); //recursively call the Power function and multiply it with the result
+        }
+        return -1; //required by compiler
     }
 }
