@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="520aa021-df14-41c9-acd2-988d7379d1a8" name="Changes" comment="Calculating the value of a raised to the power of n using recursion">
+    <list default="true" id="520aa021-df14-41c9-acd2-988d7379d1a8" name="Changes" comment="Printing the array elements in reversion using recursive method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -55,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680682907320</updated>
       <workItem from="1680682908898" duration="1069000" />
-      <workItem from="1680684701398" duration="22224000" />
+      <workItem from="1680684701398" duration="23211000" />
     </task>
     <task id="LOCAL-00001" summary="finding minimum of an array with &quot;n&quot; numbers">
       <created>1680683051277</created>
@@ -141,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681037264594</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Printing the array elements in reversion using recursive method">
+      <created>1681038733176</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681038733176</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +166,7 @@
     <MESSAGE value="Calculating the factorial of a number by recursive method" />
     <MESSAGE value="Finding n-th element of Fibonacci sequence by using recursion" />
     <MESSAGE value="Calculating the value of a raised to the power of n using recursion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calculating the value of a raised to the power of n using recursion" />
+    <MESSAGE value="Printing the array elements in reversion using recursive method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Printing the array elements in reversion using recursive method" />
   </component>
 </project>

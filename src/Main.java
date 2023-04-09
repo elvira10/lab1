@@ -25,6 +25,9 @@ public class Main {
             case 7:
                 Task7.task7_main();
                 break;
+            case 8:
+                Task8.task8_main();
+                break;
             default:
                 System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
@@ -254,4 +257,39 @@ class Task7 {
                     printReversed(arr, n-1); //recursively call the function printReversed
                 }
             }
+}
+
+
+class Task8 {
+    public static void task8_main(){
+        Scanner scanner = new Scanner(System.in); //creating a Scanner instance
+        System.out.print("Enter a string: "); //getting the user's input
+        String s = scanner.next(); //storing the input in variable s
+
+        if (ConsistsAllDigits(s)) {
+            System.out.println("Yes"); //checking if function is true, then print "Yes"
+        } else {
+            System.out.println("No"); //if false, print "No"
+        }
+    }
+
+    /**
+     * Checking if the entered string contains only digits
+     * @param s string that is going to be checked
+     * @return true if s contains only digits, false of not
+     */
+    public static boolean ConsistsAllDigits(String s) {
+        if (s.length() == 0) {
+            return true; //base case for empty string
+        } else {
+            char first = s.charAt(0); //declaring first character of string
+            if (Character.isDigit(first)) { //checking whether the first character is digit
+                String remaining = s.substring(1); //get the remaining substring
+                return ConsistsAllDigits(remaining); //checking the remaining substring recursively if it consists of all digits
+            }
+            else {
+                return false; //if fist character of a string is not a digit, then return false
+            }
+        }
+    }
 }
