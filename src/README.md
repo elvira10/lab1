@@ -148,7 +148,7 @@ Base case:if k is equal to zero or n, return 1 as a result of calculating the bi
 ### Description
 Finding GCD of two numbers a and b using recursion by Euclidean Algorithm
 ### Explanation
-Base case:if there is a or b is equal to 0, return b and a, respectively; otherwise the function recursively calls itself with arguments b and remainder of a divided by b, then prints the GCD of two numbers.
+Base case: if there is a or b is equal to 0, return b and a, respectively; otherwise the function recursively calls itself with arguments b and remainder of a divided by b, then prints the GCD of two numbers.
 ### Solution
     public static int calculateGCD(int a, int b){
         if (a == 0) {
