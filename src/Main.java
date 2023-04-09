@@ -10,6 +10,9 @@ public class Main {
             case 2:
                 Task2.task2_main();
                 break;
+            case 3:
+                Task3.task3_main();
+                break;
             default:
                 System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
@@ -83,4 +86,47 @@ class Task2 {
                 return sum/n; //return the average value of n elements
                 }
         }
+}
+
+class Task3 {
+    public static void task3_main() {
+        Scanner scanner = new Scanner(System.in); //creating a Scanner instance
+        System.out.print("Enter a number: "); //getting a value from user
+        int n = scanner.nextInt(); //storing the input in variable n
+        if (isPrime(n)) { //checking if the result of isPrime function
+            System.out.println("Prime"); //if true, print "Prime"
+        } else {
+            System.out.println("Composite"); //if false, print "Composite"
+        }
+    }
+
+    /**
+     *Checking if the number is prime or not
+     * @param x the integer value that should be checked
+     * @return true if the integer value is prime, false if not
+     */
+    public static boolean isPrime(int x) {
+        if (x <= 1) {
+            return false;
+        }
+        else {
+            return isPrimeRecursion(x, 2); //calling the isPrimeRecursion function with arguments x and 2
+        }
+    }
+
+    /**
+     * Assesing if a given number is prime or not
+     * @param a The value to check whether it is prime or not
+     * @param b The divisor to check if value "a" is divisible by value b
+     * @return True if value "a" is prime, false otherwise
+     */
+    private static boolean isPrimeRecursion(int a, int b) {
+        if (b == a) {
+            return true; //if both values are equal, return true
+        } else if (a % b == 0) {
+            return false; //if "a" is divisible by "b", return false
+        } else {
+            return isPrimeRecursion(a, b + 1); //call the isPrimeRecursion function recursively
+        }
+    }
 }
