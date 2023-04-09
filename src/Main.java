@@ -31,6 +31,9 @@ public class Main {
             case 9:
                 Task9.task9_main();
                 break;
+            case 10:
+                Task10.task10_main();
+                break;
             default:
                 System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
@@ -320,6 +323,37 @@ class Task9 {
             return 1; //base case
         } else {
             return findingBinomial(n - 1, k - 1) + findingBinomial(n - 1, k); //calling the function recursively to calculate the result
+        }
+    }
+}
+
+class Task10 {
+    public static void task10_main() {
+        Scanner scanner = new Scanner(System.in); //creating a Scanner instance
+        System.out.print("Enter a:"); //getting the user's input
+        int a = scanner.nextInt(); //storing the input in variable a
+        System.out.print("Enter b:"); //getting the user's input
+        int b = scanner.nextInt(); //storing the input in variable b
+
+        int GCD = calculateGCD(a, b); //calling the recursive function and storing the result in GCD
+        System.out.println(GCD); //printing the general common divisor
+    }
+
+    /**
+     * Calculating the GCD of a and b using the Euclidean Algorithm in recursive method
+     * @param a First number
+     * @param b Second number
+     * @return The GCD of two numbers
+     */
+    public static int calculateGCD(int a, int b){
+        if (a == 0) {
+            return b; //base case
+        }
+        else if (b == 0){
+            return a; //GCD(a,0)=a
+        }
+        else {
+            return calculateGCD(b, a % b); //recursion using Euclidean algorithm
         }
     }
 }
