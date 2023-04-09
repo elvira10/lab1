@@ -7,6 +7,9 @@ public class Main {
             case 1:
                 Task1.task1_main(); //performing first task for case 1
                 break;
+            case 2:
+                Task2.task2_main();
+                break;
             default:
                 System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
@@ -19,7 +22,7 @@ class Task1 {
         Scanner scanner = new Scanner(System.in); //creating a Scanner instance
         System.out.println("Enter the length of an array");  //getting the length of an array from user
         int length = scanner.nextInt(); //storing the input in length variable
-        int[] arr = new int[length]; //filling the array with the values stored
+        int[] arr = new int[length]; //declare a new array with the given length entered by user
 
         System.out.println("Enter the values of an array"); //getting the values of an array from user
         for (int i=0; i<length; i++) //iterate the array staring with index "0" to "length-1"
@@ -45,4 +48,39 @@ class Task1 {
         return Math.min(min, arr[n-1]); //assessing the smallest value identified until now with the last element in array
         }
     }
+}
+
+class Task2 {
+    public static void task2_main(){
+        Scanner scanner = new Scanner(System.in); //creating a Scanner instance
+        System.out.println("Enter the length of an array");  //getting the length of an array from user
+        int length = scanner.nextInt(); //storing the input in length variable
+        int[] arr = new int[length]; //declare a new array with the given length entered by user
+
+        System.out.println("Enter the values of an array"); //getting the values of an array from user
+        for (int i=0; i<length; i++) //iterate the array staring with index "0" to "length-1"
+        {
+            arr[i] = scanner.nextInt(); //reading the values by Scanner
+        }
+
+        double average = findAvrg(arr, arr.length); //calling the findAvrg function to calculate the average
+        System.out.println(average); //print the average
+        }
+
+        /**
+         * Finding the average of n elements in the array using recursive method
+         * @param arr an array
+         * @param n the number of elements
+         * @return the average value of n elements in array
+         */
+        public static double findAvrg(int[] arr, int n)
+        {
+            if( n == 0 )
+                return 0; //if the value is equal to zero return zero
+            else{
+                double sum = findAvrg(arr,n-1)*(n-1); //performing the function findAvrg to get the sum of the first n-1 elements
+                sum += arr[n-1]; //adding the n-th element to the sum
+                return sum/n; //return the average value of n elements
+                }
+        }
 }

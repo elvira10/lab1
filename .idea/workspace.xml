@@ -55,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680682907320</updated>
       <workItem from="1680682908898" duration="1069000" />
-      <workItem from="1680684701398" duration="15692000" />
+      <workItem from="1680684701398" duration="16399000" />
     </task>
     <task id="LOCAL-00001" summary="finding minimum of an array with &quot;n&quot; numbers">
       <created>1680683051277</created>
@@ -92,7 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680736190299</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finding the minimum number in an int array using recursion">
+      <created>1681031307525</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681031307525</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Finding the minimum number in an int array using recursion">
+      <created>1681031443630</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681031443630</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
