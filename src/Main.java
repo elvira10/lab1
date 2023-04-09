@@ -13,6 +13,9 @@ public class Main {
             case 3:
                 Task3.task3_main();
                 break;
+            case 4:
+                Task4.task4_main();
+                break;
             default:
                 System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
@@ -127,6 +130,31 @@ class Task3 {
             return false; //if "a" is divisible by "b", return false
         } else {
             return isPrimeRecursion(a, b + 1); //call the isPrimeRecursion function recursively
+        }
+    }
+}
+
+
+class Task4 {
+    public static void task4_main() {
+        Scanner scanner = new Scanner(System.in); //creating a Scanner instance
+        System.out.print("Enter a number: "); //getting a value from user
+        int n = scanner.nextInt(); //storing the input in variable n
+
+        int factorial = isFactorial(n); //calling the isFactorial function
+        System.out.println(factorial); //printing the result
+        }
+
+    /**
+     * Calculating the factorial of a number by recursive method
+     * @param a the value to calculate the factorial
+     * @return the factorial of the value
+     */
+    public static int isFactorial(int a) {
+        if (a == 0) {
+            return 1; // base case when number is equal to zero it returns 1
+        } else {
+            return a * isFactorial(a - 1); // calling func recursively to find factorial
         }
     }
 }
