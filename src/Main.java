@@ -22,6 +22,9 @@ public class Main {
             case 6:
                 Task6.task6_main();
                 break;
+            case 7:
+                Task7.task7_main();
+                break;
             default:
                 System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
@@ -222,4 +225,33 @@ class Task6 {
         }
         return -1; //required by compiler
     }
+}
+
+class Task7 {
+    public static void task7_main(){
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Enter a size of an array:"); //getting the size of an array from user
+                int n = scanner.nextInt(); //storing the input in variable n
+                int[] arr = new int[n]; //creating a new integer array to with the given length the user has inputted
+
+                System.out.println("Enter elements of an array:"); //getting the elements of an array from user
+                for (int i = 0; i < n; i++) {
+                    arr[i] = scanner.nextInt(); //storing user's input in current index of an i
+                }
+                printReversed(arr, n); //calling the function to invert array
+            }
+
+            /**
+             * Printing the array elements in reversion using recursive method
+             * @param arr The array that needs to be printed in reversed order
+             * @param n The size of an array
+             */
+            public static void printReversed(int[] arr, int n) {
+                if (n == 0) {
+                    return; //base case
+                } else {
+                    System.out.print(arr[n-1] + " "); //print the last element of array
+                    printReversed(arr, n-1); //recursively call the function printReversed
+                }
+            }
 }
