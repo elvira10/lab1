@@ -28,6 +28,9 @@ public class Main {
             case 8:
                 Task8.task8_main();
                 break;
+            case 9:
+                Task9.task9_main();
+                break;
             default:
                 System.out.println("please enter number from 1 to 10"); //if the number doesn't match print message
                 break;
@@ -290,6 +293,33 @@ class Task8 {
             else {
                 return false; //if fist character of a string is not a digit, then return false
             }
+        }
+    }
+}
+
+class Task9 {
+    public static void task9_main(){
+        Scanner scanner = new Scanner(System.in); //creating a Scanner instance
+        System.out.print("Enter n:"); //getting the user's input
+        int n = scanner.nextInt(); //storing the input in variable n
+        System.out.print("Enter k:"); //getting the user's input
+        int k = scanner.nextInt(); //storing the input in variable k
+
+        int binomial = findingBinomial(n, k); //calling the function to calculate the binomial coefficient and storing it in binomial variable
+        System.out.println(binomial); //printing the result
+    }
+
+    /**
+     * Calculating recursively the binomial coefficient with numbers n and k
+     * @param n Number of all items
+     * @param k Number of items to choose
+     * @return The binomial coefficient of given numbers
+     */
+    public static int findingBinomial(int n, int k) {
+        if (k == 0 || k == n) {
+            return 1; //base case
+        } else {
+            return findingBinomial(n - 1, k - 1) + findingBinomial(n - 1, k); //calling the function recursively to calculate the result
         }
     }
 }
